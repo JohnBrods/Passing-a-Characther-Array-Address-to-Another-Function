@@ -2794,13 +2794,13 @@ void Update_Root_Directory(unsigned long Address){
 void main(){
                                                                                                      //cr
                                  //  cr  t   h  a  n  k  s    4     w  a   t  c h  i  n  g   .    d  o  n  t     f  o  r  g  e  t     t  o     h  i  t     l  i  k  e
- unsigned short Character_Array[] = {14,84,72,65,78,75,83,32,52,32,87,65,84,67,72,73,78,71,46,13,68,79,78,84,32,70,79,82,71,69,84,32,84,79,32,72,73,84,32,76,73,75,69,13,
+ unsigned short Character_Array[] = {13,84,72,65,78,75,83,32,52,32,87,65,84,67,72,73,78,71,46,13,68,79,78,84,32,70,79,82,71,69,84,32,84,79,32,72,73,84,32,76,73,75,69,13,
 
                                    //s  e  e     s  h  o  w     m  o  r  e     4     l  i  n  k
                                     83,69,69,32,83,72,79,87,32,77,79,82,69,32,52,32,76,73,78,75};
 
-      unsigned long  Pointer = &Character_Array;     //THIS WILL GIVE THE THE ADDRESS IN MEMORY OF THE CHARACTER ARRAY
-      unsigned char  *Pointer2 = Character_Array;     //THIS POINTS TO THE ARRAY AND CHARACTERS IN THAT ARRAY OR CHARACTERS WITHIN THE ADDRESS LOCATIONS OF THAT ARRAY.
+      unsigned long Pointer = &Character_Array;     //THIS WILL GIVE THE THE ADDRESS IN MEMORY OF THE CHARACTER ARRAY
+      unsigned char *Pointer2 = Character_Array;     //THIS POINTS TO THE ARRAY AND CHARACTERS IN THAT ARRAY OR CHARACTERS WITHIN THE ADDRESS LOCATIONS OF THAT ARRAY.
       unsigned int xpos = 30;
       unsigned int ypos = 30;
       unsigned long Address = 0;
@@ -3081,7 +3081,7 @@ void main(){
 
      Root_Directory_In_Bytes = (Root_Directory)<<9;     //SAME AS ROOT_DIRECTORY * 512
      Number_of_Root_Directory_Entries = Number_of_Root_Directory_Entries * 32;
-     Sum1 = Sum1 = (TextFile.Start_Cluster -2) *(64*512);
+     Sum1 = (TextFile.Start_Cluster -2) *(64*512);
      Root_Directory_In_Bytes = (Root_Directory_In_Bytes + Number_of_Root_Directory_Entries);
      Sum1 = (Sum1 + Root_Directory_In_Bytes);
      Actual_Sector.Sector = Sum1/512;
